@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  user-select: none;
+}
+
+body {
+  background: #f5fbff;
+  color: #333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 40px;
+  background: white;
+  align-items: center;
+}
+
+.logo {
+  color: #1e73be;
+  /* font-weight: 600; */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: 1.5rem;
+}
+
+.logo img {
+  width: 4vw;
+}
+
+.logo span {
+  font-weight: 400;
+}
+
+.logoline {
+  display: flex;
+  align-items: center;
+  gap: 0.3vw;
+  font-size: 1rem;
+}
+
+.logoline span {
+  width: 1vw;
+  height: 0.5vh;
+  background: #1e73be;
+  border-radius: 10px;
+}
+
+nav a {
+  margin-left: 20px;
+  color: #01539a;
+  font-weight: 500;
+}
+
+.top-info {
+  text-align: center;
+  font-size: 13px;
+  padding: 6px;
+  background: #eaf4ff;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  padding: 50px;
+  background: linear-gradient(to left, #e3f2fd, #ffffff);
+}
+
+.hero-img {
+  flex: 1;
+  height: 280px;
+  background: #dbeeff;
+  border-radius: 20px;
+  background-image: url(Smile-Dental-Clinic.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-img img {
+  width: 300px;
+}
+
+.hero-text {
+  flex: 1;
+  padding-left: 40px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #1565c0;
+  /* font-weight: 500; */
+  font-family: Arial, sans-serif;
+}
+
+.hero-text p {
+  margin-top: 15px;
+  color: #555;
+}
+
+/* WAVES */
+.wave svg {
+  width: 100%;
+  height: 80px;
+}
+
+.wave path {
+  fill: #eaf4ff;
+}
+
+/* ABOUT */
+.about {
+  display: flex;
+  padding: 50px;
+  gap: 40px;
+  background: white;
+}
+
+.about-img {
+  width: 45%;
+  height: 220px;
+  background: #dbeeff;
+  border-radius: 15px;
+  background-image: url(dental-clinic-interior.avif);
+  background-size: cover;
+  background-position: center;
+}
+
+.wave.flip svg {
+  transform: rotate(180deg);
+}
+
+/* TITLES */
+.section-title,
+.title-wrap h2 {
+  font-size: 26px;
+  color: #1e73be;
+  font-weight: 500;
+}
+
+.title-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.title-wrap span {
+  width: 50px;
+  height: 3px;
+  background: #1e73be;
+  border-radius: 10px;
+}
+
+/* SERVICES */
+.services {
+  padding: 60px 40px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  background: white;
+  height: 180px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding-top: 2px;
+  overflow: hidden;
+
+}
+
+.service-card img {
+  width: 100%;
+  height: 82%;
+  object-fit: cover;
+}
+
+/* APPOINTMENT */
+.appointment {
+  background: #eaf4ff;
+  padding: 60px 40px;
+}
+
+.appointment-box {
+  display: flex;
+  gap: 30px;
+}
+
+form {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 50%;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.date-guide {
+  color: #555;
+  margin-left: 7px;
+  display: block;
+
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #1e73be;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+.about-text {
+  padding: 0px 20px 0px 40px;
+}
+
+.appoint-img {
+  width: 50%;
+  background: #dbeeff;
+  border-radius: 15px;
+  background-image: url(reception\ area.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/* CONTACT */
+.contact {
+  padding: 50px;
+  /* text-align: center; */
+}
+
+.contactinfo {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  color: #0f4573;
+
+}
+
+.contactinfo span svg {
+  position: relative;
+  top: 5px;
+}
+
+/* FOOTER */
+footer {
+  background: #1e73be;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+  .header {
+    padding: 1vw 2vw;
+  }
+
+  .logo img {
+    width: 2rem;
+    margin-top: 10px;
+
+  }
+
+  .logotext {
+    font-size: 1rem;
+  }
+
+  .logoline {
+    font-size: 0.7rem;
+  }
+
+  .logoline span {
+    width: 1.4vw;
+    height: 0.4vw;
+
+  }
+
+  nav a {
+    margin-left: 5px;
+    font-size: 0.7rem;
+  }
+
+  .hero-text {
+
+    padding-left: 34px;
+  }
+
+  .about-img {
+    width: 106%;
+  }
+
+  .about-text {
+    padding: 0%;
+  }
+
+  .section-title,
+  .title-wrap h2 {
+    padding-bottom: 1rem;
+    font-size: 21px
+  }
+
+  .hero,
+  .about,
+  .appointment-box {
+    flex-direction: column;
+  }
+
+  form,
+  .appoint-img {
+    width: 100%;
+  }
+}
