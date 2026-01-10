@@ -61,7 +61,11 @@ nav a {
   color: #01539a;
   font-weight: 500;
 }
-
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
 .top-info {
   text-align: center;
   font-size: 13px;
@@ -329,6 +333,30 @@ footer {
     padding: 1vw 2vw;
   }
 
+
+
+
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
   .logo img {
     width: 2rem;
     margin-top: 10px;
@@ -356,7 +384,7 @@ footer {
 
   .hero-text {
 
-    padding-left: 0px;
+    padding-left:5px;
   }
 
   .hero-text h1 {
