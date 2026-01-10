@@ -275,6 +275,54 @@ footer {
   padding: 15px;
 }
 
+
+/*  <!-- for popup while user click on service  --> */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal-box {
+  background: white;
+  max-width: 400px;
+  width: 90%;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  position: relative;
+  animation: scaleUp 0.3s ease;
+}
+
+.modal-box h3 {
+  color: #4aa3df;
+  margin-bottom: 10px;
+}
+
+.modal-box p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+
 /* RESPONSIVE */
 @media(max-width: 768px) {
   .header {
@@ -308,7 +356,11 @@ footer {
 
   .hero-text {
 
-    padding-left: 34px;
+    padding-left: 0px;
+  }
+
+  .hero-text h1 {
+    width: 81vw;
   }
 
   .about-img {
@@ -323,6 +375,14 @@ footer {
   .title-wrap h2 {
     padding-bottom: 1rem;
     font-size: 21px
+  }
+
+  .title-wrap {
+    gap: 10px;
+  }
+
+  .title-wrap span {
+    width: 30px;
   }
 
   .hero,

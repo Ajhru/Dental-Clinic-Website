@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>SmileCare Dental Clinic</title>
 
   <!-- FONT -->
@@ -35,7 +35,7 @@
   <section class="hero">
     <div class="hero-img"></div>
     <div class="hero-text">
-      <h1>Your Smile, Our Priority <span>🦷</span></h1>
+      <h1>Your Smile, Our Priority 🦷</h1>
       <p>Professional dental care with modern equipment and experienced dentists.</p>
     </div>
   </section>
@@ -76,10 +76,25 @@
     </div>
 
     <div class="service-grid">
-      <div class="service-card"><img src="Tooth-Filling img.jpg" alt="image"><br><b>Dental Filling</b></div>
-      <div class="service-card"><img src="root-canal.webp" alt="image"> <br><b>Root Canal</b></div>
-      <div class="service-card"><img src="Teeth-Clean.webp" alt="image"> <br><b>Teeth Cleaning</b></div>
-      <div class="service-card"><img src="Teeth-Whitening.png" alt="image"> <br><b>Teeth Whitening</b></div>
+      <div class="service-card"
+        onclick="openService(`Dental Filling`,`Dental fillings repair cavities and damaged teeth by restoring their natural shape and function. They help stop further decay and protect the tooth from pain and infection.` )">
+        <img src="Tooth-Filling img.jpg" alt="image"><br><b>Dental Filling</b>
+      </div>
+      <div class="service-card"
+        onclick="openService(`Dental Filling`,`Root canal treatment removes infected tissue from inside the tooth, relieving severe pain and preventing tooth loss. It saves the natural tooth and restores normal chewing. ` )">
+        <img src="root-canal.webp" alt="image">
+        <br><b>Root Canal</b>
+      </div>
+      <div class="service-card"
+        onclick="openService(`Dental Filling`,`Professional teeth cleaning removes plaque, tartar, and stains that regular brushing cannot. It keeps gums healthy and helps prevent cavities and gum disease.  ` )">
+        <img src="Teeth-Clean.webp" alt="image">
+        <br><b>Teeth Cleaning</b>
+      </div>
+      <div class="service-card"
+        onclick="openService(`Dental Filling`,`Teeth whitening safely brightens discolored teeth and improves smile appearance. It is a quick and effective way to achieve a whiter, more confident smile.  ` )">
+        <img src="Teeth-Whitening.png" alt="image">
+        <br><b>Teeth Whitening</b>
+      </div>
     </div>
   </section>
 
@@ -96,7 +111,7 @@
         <input id="email" placeholder="Email Address">
         <input id="phone" placeholder="Phone Number" required>
         <small class="date-guide">Select your Preferred date*</small>
-        <input id="date"  type="date" title="Select your Preferred date" required>
+        <input id="date" type="date" title="Select your Preferred date" required>
 
         <select id="service" required>
           <option value="">Select Service</option>
@@ -153,6 +168,17 @@
   <footer>
     © 2025 SmileCare Dental Clinic. All Rights Reserved.
   </footer>
+
+  <!-- for popup while user click on service  -->
+  <div id="serviceModal" class="modal">
+    <div class="modal-box">
+      <span class="close" onclick="closeService()">×</span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+
   <script>
     document.getElementById("appointmentForm").addEventListener("submit", function (e) {
       e.preventDefault();
@@ -179,6 +205,21 @@
       let url = `https://wa.me/${clinicWhatsApp}?text=${text}`;
       window.open(url, "_blank");
     });
+
+
+
+
+
+    //  <!-- for popup while user click on service  -->
+    function openService(title, text) {
+      document.getElementById("modalTitle").innerText = title;
+      document.getElementById("modalText").innerText = text;
+      document.getElementById("serviceModal").style.display = "flex";
+    }
+
+    function closeService() {
+      document.getElementById("serviceModal").style.display = "none";
+    }
   </script>
 </body>
 
